@@ -1,0 +1,26 @@
+# Font (Nerd Font variant gives icons in eza/lazygit/etc.)
+font-family = "JetBrainsMono Nerd Font"
+font-size = 16
+
+# Theme
+theme = Catppuccin Macchiato
+
+# Window
+window-padding-x = 16
+window-padding-y = 16
+macos-titlebar-style = tabs
+
+# Shell integration
+shell-integration = zsh
+# https://ghostty.org/docs/features/shell-integration#ssh-integration
+shell-integration-features = ssh-env,ssh-terminfo
+
+# -----------------------------------------------------------------------------
+# Keybindings
+# -----------------------------------------------------------------------------
+# Switch tabs with Cmd+Left / Cmd+Right
+keybind = cmd+left=previous_tab
+keybind = cmd+right=next_tab
+
+# Drop-down "quick terminal" toggleable from anywhere with Cmd+`
+keybind = global:cmd+grave_accent=toggle_quick_terminal

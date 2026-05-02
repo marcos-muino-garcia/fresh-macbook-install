@@ -1,0 +1,20 @@
+# ~/.zshrc.local — machine-specific shell config.
+#
+# Sourced from ~/.zshrc but NOT tracked in the fresh-macbook-install repo.
+# Put anything here that depends on a specific machine's filesystem layout,
+# work account, or one-off project paths.
+
+# ---- Personal/work CLIs ------------------------------------------------------
+# alias yepclidev="$HOME/workspace/dev/yepcode/yepcode-cli/bin/dev"
+
+# ---- Google Cloud SDK --------------------------------------------------------
+# GCLOUD_DIR="$HOME/workspace/bin/google-cloud-sdk"
+# [[ -f "$GCLOUD_DIR/path.zsh.inc" ]]       && . "$GCLOUD_DIR/path.zsh.inc"
+# [[ -f "$GCLOUD_DIR/completion.zsh.inc" ]] && . "$GCLOUD_DIR/completion.zsh.inc"
+
+# ---- opencode ----------------------------------------------------------------
+# export PATH="$HOME/.opencode/bin:$PATH"
+
+# ---- Secrets ------------------------------------------------------------------
+# Prefer `op run` (1Password) or Bitwarden CLI over hardcoded values.
+# export OPENAI_API_KEY="$(bw get password openai-api-key)"
