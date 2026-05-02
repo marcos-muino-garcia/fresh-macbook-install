@@ -146,6 +146,10 @@ cask "stats"
 # https://git-fork.com/
 cask "fork"
 
+# Ferdium - all your webapps apps into one application
+# https://ferdium.org/
+cask "ferdium"
+
 # =============================================================================
 # Fonts
 # =============================================================================
