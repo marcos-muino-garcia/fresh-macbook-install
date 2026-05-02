@@ -18,9 +18,9 @@ brew "lazygit"
 # https://github.com/cli/cli
 brew "gh"
 
-# gh-dash - terminal dashboard for GitHub PRs and issues
+# gh-dash is a `gh` CLI extension (NOT a Homebrew formula). It's installed
+# via `gh extension install dlvhdr/gh-dash` in scripts/00-brew.sh.
 # https://github.com/dlvhdr/gh-dash
-brew "gh-dash"
 
 # ripgrep - fast recursive text search respecting .gitignore
 # https://github.com/BurntSushi/ripgrep

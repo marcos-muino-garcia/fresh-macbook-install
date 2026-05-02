@@ -30,6 +30,21 @@ if [[ -x "$(brew --prefix)/opt/fzf/install" ]]; then
   "$(brew --prefix)/opt/fzf/install" --all --no-bash --no-fish --no-update-rc
 fi
 
+# gh CLI extensions. gh-dash is shipped as an extension, not a formula.
+if command -v gh >/dev/null 2>&1; then
+  GH_EXTENSIONS=(
+    "dlvhdr/gh-dash"
+  )
+  installed="$(gh extension list 2>/dev/null || true)"
+  for ext in "${GH_EXTENSIONS[@]}"; do
+    if grep -q "$ext" <<<"$installed"; then
+      gh extension upgrade "$ext" >/dev/null 2>&1 || true
+    else
+      gh extension install "$ext" || true
+    fi
+  done
+fi
+
 # Symlink openjdk@21 so /usr/libexec/java_home and other JVM tools see it.
 if brew list --formula | grep -q '^openjdk@21$'; then
   if [[ ! -L /Library/Java/JavaVirtualMachines/openjdk-21.jdk ]]; then
