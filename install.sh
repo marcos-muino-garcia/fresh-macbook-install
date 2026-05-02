@@ -7,6 +7,19 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export REPO_ROOT
 
+# Each child script runs in its own bash process, so a PATH set inside
+# 00-brew.sh wouldn't reach 10-dotfiles.sh. Eval brew shellenv here so
+# /opt/homebrew/bin is exported to every subsequent step (no-op before
+# 00-brew.sh installs Homebrew on a fresh machine).
+ensure_brew_on_path() {
+  if [[ -x /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  elif [[ -x /usr/local/bin/brew ]]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+  fi
+}
+ensure_brew_on_path
+
 SCRIPTS=(
   "00-brew.sh"
   "10-dotfiles.sh"
@@ -18,6 +31,7 @@ SCRIPTS=(
 for script in "${SCRIPTS[@]}"; do
   printf '\n\033[1;34m==> Running %s\033[0m\n' "$script"
   bash "$REPO_ROOT/scripts/$script"
+  ensure_brew_on_path
 done
 
 cat <<'EOF'
