@@ -142,6 +142,10 @@ cask "visual-studio-code"
 # https://github.com/exelban/stats
 cask "stats"
 
+# Fork - a fast and friendly git clients
+# https://git-fork.com/
+cask "fork"
+
 # =============================================================================
 # Fonts
 # =============================================================================
