@@ -1,2 +1,8 @@
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
+
+# Auto-install missing tool versions when entering a directory (so `cd`
+# into a project with a `.nvmrc` / `.tool-versions` triggers an install).
+auto_install = true
+# Also auto-install when a shim is invoked for an uninstalled version.
+not_found_auto_install = true
