@@ -74,7 +74,8 @@ After it finishes, it prints instructions for adding your new SSH key to GitHub.
 │   ├── ghostty/            # ~/.config/ghostty/config
 │   ├── karabiner/          # ~/.config/karabiner/karabiner.json
 │   ├── lazygit/            # ~/.config/lazygit/config.yml
-│   └── delta/              # ~/.config/delta/themes.gitconfig
+│   ├── delta/              # ~/.config/delta/themes.gitconfig
+│   └── mise/               # ~/.config/mise/config.toml
 ├── templates/
 │   └── .zshrc.local.example  # copied to ~/.zshrc.local on first run
 └── .github/workflows/shellcheck.yml

@@ -4,13 +4,14 @@
 # Each subdir of dotfiles/ is a "package" whose tree mirrors $HOME, e.g.
 #   dotfiles/zsh/.zshrc                 -> ~/.zshrc
 #   dotfiles/ghostty/.config/ghostty/   -> ~/.config/ghostty/
+#   dotfiles/mise/.config/mise/        -> ~/.config/mise/
 set -euo pipefail
 
 REPO_ROOT="${REPO_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
 DOTFILES_DIR="$REPO_ROOT/dotfiles"
 TIMESTAMP="$(date +%Y%m%d-%H%M%S)"
 
-PACKAGES=(zsh vim ghostty karabiner lazygit delta)
+PACKAGES=(zsh vim ghostty karabiner lazygit delta mise)
 
 if ! command -v stow >/dev/null 2>&1; then
   echo "ERROR: stow not found. Run scripts/00-brew.sh first." >&2
