@@ -23,6 +23,7 @@ ensure_brew_on_path
 SCRIPTS=(
   "00-brew.sh"
   "10-dotfiles.sh"
+  "15-vim-plugins.sh"
   "20-macos.sh"
   "30-git.sh"
   "40-shell.sh"

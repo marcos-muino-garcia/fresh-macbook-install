@@ -29,6 +29,7 @@ git config --global interactive.diffFilter "delta --color-only"
 git config --global delta.navigate true
 git config --global delta.line-numbers true
 git config --global delta.side-by-side false
+git config --global delta.features "catppuccin-macchiato"
 
 # Pull in the bundled delta themes (installed via stow at ~/.config/delta/themes.gitconfig).
 if [[ -f "$HOME/.config/delta/themes.gitconfig" ]]; then

@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Stow conflict backups (created by scripts/10-dotfiles.sh)
+*.bak.*

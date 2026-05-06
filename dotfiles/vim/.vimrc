@@ -386,4 +386,11 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 
 " Custom config
-:colorscheme dracula
+syntax enable
+
+" Enable true colors (required for Catppuccin)
+if has("termguicolors")
+    set termguicolors
+endif
+
+colorscheme catppuccin_macchiato
