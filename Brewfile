@@ -54,6 +54,10 @@ brew "btop"
 # https://github.com/jqlang/jq
 brew "jq"
 
+# tmux - terminal multiplexer
+# https://github.com/tmux/tmux
+brew "tmux"
+
 # zellij - modern terminal workspace and multiplexer
 # https://github.com/zellij-org/zellij
 brew "zellij"
